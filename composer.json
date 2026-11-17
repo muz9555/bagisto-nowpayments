@@ -1,0 +1,69 @@
+{
+    "name": "muz9555/bagisto-nowpayments",
+    "description": "NOWPayments hosted cryptocurrency checkout for Bagisto 2.5 with verified IPNs and idempotent settlement.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "bagisto",
+        "nowpayments",
+        "cryptocurrency",
+        "payment-gateway",
+        "laravel"
+    ],
+    "homepage": "https://github.com/muz9555/bagisto-nowpayments",
+    "support": {
+        "issues": "https://github.com/muz9555/bagisto-nowpayments/issues",
+        "source": "https://github.com/muz9555/bagisto-nowpayments"
+    },
+    "require": {
+        "php": "^8.4",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "laravel/framework": "^13.0",
+        "konekt/concord": "^1.18"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24",
+        "laravel/pint": "^1.19",
+        "pestphp/pest": "^5.0",
+        "pestphp/pest-plugin-laravel": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\NowPayments\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webkul\\NowPayments\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\NowPayments\\Providers\\NowPaymentsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest --configuration=phpunit.xml.dist",
+        "test:bagisto": "pest --configuration=phpunit.bagisto.xml",
+        "lint": "pint --test"
+    },
+    "archive": {
+        "exclude": [
+            "/.github",
+            "/tests",
+            "/phpunit*.xml*",
+            "/pint.json",
+            "/.gitignore",
+            "/.gitattributes"
+        ]
+    }
+}
