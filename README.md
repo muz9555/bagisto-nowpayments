@@ -17,11 +17,11 @@ This is a Bagisto extension, not a standalone payment application. Earlier Bagis
 
 ## Install with Composer
 
-Until the package is submitted to Packagist, add this GitHub repository to your **existing Bagisto application's** Composer configuration:
+The initial package is published on `main`. Until a stable version is tagged and the package is submitted to Packagist, add this GitHub repository to your **existing Bagisto application's** Composer configuration:
 
 ```bash
 composer config repositories.nowpayments vcs https://github.com/muz9555/bagisto-nowpayments
-composer require muz9555/bagisto-nowpayments:^1.0
+composer require muz9555/bagisto-nowpayments:dev-main
 php artisan nowpayments:install
 ```
 

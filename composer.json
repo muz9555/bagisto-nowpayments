@@ -63,7 +63,11 @@
             "/phpunit*.xml*",
             "/pint.json",
             "/.gitignore",
-            "/.gitattributes"
+            "/.gitattributes",
+            "/vendor",
+            "/composer.lock",
+            "/.phpunit.cache",
+            "/.git"
         ]
     }
 }
